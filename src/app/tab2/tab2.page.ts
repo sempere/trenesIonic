@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { TrenesService } from "../services/trenes.service";
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -7,6 +9,16 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  public todos;
+
+  constructor(private trenesService : TrenesService) {
+    console.debug;
+    trenesService.getTrenes().subscribe(res => {
+      this.todos = res;
+      console.debug;
+    });
+  }
+
+
 
 }

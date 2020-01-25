@@ -8,5 +8,8 @@ export class TrenesService {
 
   constructor(private fireStore: AngularFirestore) { }
 
-  public hola que tal
+  public getTrenes() {
+    return this.fireStore.collection("trenes", ref => ref.where("id", "==", "tren1"))
+    .valueChanges();
+  }
 }
