@@ -8,5 +8,5 @@ export class TrenesService {
 
   constructor(private fireStore: AngularFirestore) { }
 
-  public 
+  public hola que tal
 }
