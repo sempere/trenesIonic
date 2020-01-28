@@ -19,7 +19,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
   imports: [
     BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    AngularFirestoreModule
   ],
   providers: [
     StatusBar,
